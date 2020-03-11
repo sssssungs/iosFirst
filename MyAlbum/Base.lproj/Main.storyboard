@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,74 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyAlbum" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZM0-kG-PSR">
+                                <rect key="frame" x="133.66666666666666" y="650" width="108" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="108" id="HZj-ck-q2E"/>
+                                    <constraint firstAttribute="height" constant="50" id="lSS-4P-zOA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                <state key="normal" title="refresh">
+                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I0Z-0c-Lk7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Pics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tm3-s8-NEP">
+                                <rect key="frame" x="133" y="121" width="109" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="13V-7y-Rln"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Scf-f0-3Dw">
+                                <rect key="frame" x="125" y="583" width="123" height="54"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple" translatesAutoresizingMaskIntoConstraints="NO" id="npD-hZ-U25">
+                                <rect key="frame" x="27.666666666666657" y="212" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="8X9-aA-Q7o"/>
+                                    <constraint firstAttribute="width" constant="320" id="9w1-2z-hF3"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Tm3-s8-NEP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="77" id="2HI-eP-f8g"/>
+                            <constraint firstItem="npD-hZ-U25" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" id="8pO-ft-jMd"/>
+                            <constraint firstItem="ZM0-kG-PSR" firstAttribute="top" secondItem="Scf-f0-3Dw" secondAttribute="bottom" constant="13" id="DD5-hM-ffz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tm3-s8-NEP" secondAttribute="trailing" constant="133" id="EYc-lM-DpV"/>
+                            <constraint firstItem="Tm3-s8-NEP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="133" id="JZZ-7Z-Ocn"/>
+                            <constraint firstItem="npD-hZ-U25" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="168" id="Nb0-Xx-Wzu"/>
+                            <constraint firstItem="npD-hZ-U25" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZAJ-Jv-hl9"/>
+                            <constraint firstItem="Scf-f0-3Dw" firstAttribute="centerX" secondItem="ZM0-kG-PSR" secondAttribute="centerX" id="clC-vd-TZH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZM0-kG-PSR" secondAttribute="bottom" constant="78" id="kCF-FT-o5b"/>
+                            <constraint firstItem="ZM0-kG-PSR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nj5-w5-Ql2"/>
+                            <constraint firstItem="npD-hZ-U25" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="168" id="qu8-M2-J9D"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="priceLabel" destination="Scf-f0-3Dw" id="Eyg-DP-RXk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-74" y="-44"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="apple" width="708" height="720"/>
+    </resources>
 </document>
